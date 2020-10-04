@@ -1,0 +1,16 @@
+PODS:
+  - DailymotionPlayerSDK (3.7.8)
+
+DEPENDENCIES:
+  - DailymotionPlayerSDK
+
+SPEC REPOS:
+  trunk:
+    - DailymotionPlayerSDK
+
+SPEC CHECKSUMS:
+  DailymotionPlayerSDK: 8f08b46718bb6728f6b1dae9e431480a11688e1a
+
+PODFILE CHECKSUM: 46aa69b13cfb3760b20bc2bcf7d225e8bd3dee93
+
+COCOAPODS: 1.9.3

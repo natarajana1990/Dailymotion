@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="llv-P0-sLj">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="OId-ct-PAo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="llv-P0-sLj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W91-ju-Agi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ckO-Nf-7Lr" kind="relationship" relationship="rootViewController" id="eXf-hE-sDg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPA-ge-whb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.8000000000002" y="132.68365817091455"/>
+        </scene>
+        <!--Dm Video List Controller-->
+        <scene sceneID="dnH-4K-McN">
+            <objects>
+                <collectionViewController id="ckO-Nf-7Lr" customClass="DmVideoListController" customModule="Dailymotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" id="oea-im-fyr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fsf-XS-hWA">
+                            <size key="itemSize" width="100" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VIDEO_CELL_REUSE_IDENTIFIER" id="7c7-w4-hIh" customClass="VideoCell" customModule="Dailymotion" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ACZ-58-OAV">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FJb-tg-rQd">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ra-nD-FkD">
+                                            <rect key="frame" x="0.0" y="50" width="100" height="0.0"/>
+                                            <color key="backgroundColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="0.87687059859154926" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play-icon" translatesAutoresizingMaskIntoConstraints="NO" id="bpJ-8h-AmA">
+                                            <rect key="frame" x="35" y="10" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="CW7-N1-Ipo"/>
+                                                <constraint firstAttribute="height" constant="30" id="wW1-K6-sL3"/>
+                                            </constraints>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3le-6m-Yym">
+                                            <rect key="frame" x="40" y="15" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="5Ra-nD-FkD" secondAttribute="trailing" id="73m-oe-aMf"/>
+                                        <constraint firstItem="FJb-tg-rQd" firstAttribute="top" secondItem="ACZ-58-OAV" secondAttribute="top" id="8ng-wW-xl1"/>
+                                        <constraint firstItem="3le-6m-Yym" firstAttribute="centerY" secondItem="ACZ-58-OAV" secondAttribute="centerY" id="F8Y-7Q-43i"/>
+                                        <constraint firstAttribute="trailing" secondItem="FJb-tg-rQd" secondAttribute="trailing" id="IX4-IZ-5mq"/>
+                                        <constraint firstItem="bpJ-8h-AmA" firstAttribute="centerX" secondItem="ACZ-58-OAV" secondAttribute="centerX" id="KRB-Qi-H4S"/>
+                                        <constraint firstItem="bpJ-8h-AmA" firstAttribute="centerY" secondItem="ACZ-58-OAV" secondAttribute="centerY" id="NEX-kx-nGk"/>
+                                        <constraint firstAttribute="bottom" secondItem="5Ra-nD-FkD" secondAttribute="bottom" id="Wur-f0-bcP"/>
+                                        <constraint firstItem="5Ra-nD-FkD" firstAttribute="leading" secondItem="ACZ-58-OAV" secondAttribute="leading" id="c8J-49-IjE"/>
+                                        <constraint firstAttribute="bottom" secondItem="FJb-tg-rQd" secondAttribute="bottom" id="gI0-wG-je3"/>
+                                        <constraint firstItem="FJb-tg-rQd" firstAttribute="leading" secondItem="ACZ-58-OAV" secondAttribute="leading" id="iCM-qN-qZe"/>
+                                        <constraint firstItem="3le-6m-Yym" firstAttribute="centerX" secondItem="ACZ-58-OAV" secondAttribute="centerX" id="oOd-Lu-e8x"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="3le-6m-Yym" id="8PJ-J9-0g5"/>
+                                    <outlet property="imageView" destination="FJb-tg-rQd" id="XqU-ZL-jhi"/>
+                                    <outlet property="titleView" destination="5Ra-nD-FkD" id="WRe-eF-fSq"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VIDEO_CELL_HEADER_REUSE_IDENTIFIER" id="3Q3-UR-x6p">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VIDEO_CELL_FOOTER_REUSE_IDENTIFIER" id="Ii9-Ty-QWj">
+                            <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <activityIndicatorView hidden="YES" opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Xlh-ud-FuW">
+                                    <rect key="frame" x="177" y="15" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="ckO-Nf-7Lr" id="Zqq-9C-abt"/>
+                            <outlet property="delegate" destination="ckO-Nf-7Lr" id="ded-07-Dyj"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="a6J-sk-Teg"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jQ-Be-KQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="132.68365817091455"/>
+        </scene>
+        <!--Dm Player Controller-->
+        <scene sceneID="KjB-PF-VW1">
+            <objects>
+                <viewController storyboardIdentifier="VideoPlayerController" id="lr9-cJ-YwS" customClass="DmPlayerController" customModule="Dailymotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2aZ-hq-hQu"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdM-ud-wVT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tkv-AK-EVk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JOz-fq-jlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3514" y="792"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play-icon" width="20" height="20"/>
+    </resources>
+</document>
